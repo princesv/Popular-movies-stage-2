@@ -23,7 +23,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/nameTv"/>
+            android:id="@+id/nameTv"
+            android:textColor="@color/colorPrimaryDark"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,7 +32,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/userNameTv"/>
+            android:id="@+id/userNameTv"
+            android:textColor="@color/colorPrimaryDark"/>
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,7 +41,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ratingTv"/>
+            android:id="@+id/ratingTv"
+            android:textColor="@color/colorPrimaryDark"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,6 +50,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/reviewTv"/>
+            android:id="@+id/reviewTv"
+            android:textColor="@color/colorPrimaryDark"/>
     </LinearLayout>
 </LinearLayout>

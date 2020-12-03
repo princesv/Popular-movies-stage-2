@@ -59,7 +59,8 @@ public class MainActivity extends AppCompatActivity implements MyOwnAdapter.List
 
     private final String stringBaseAddressTopRated = "http://api.themoviedb.org/3/movie/top_rated?api_key=";
     private final String stringBaseAddressPopular = "http://api.themoviedb.org/3/movie/popular?api_key=";
-    private final String api = "41ec4d909d71953ad8ffa75eb3157315";
+    public static final String api = "";
+    //add API here
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +88,14 @@ public class MainActivity extends AppCompatActivity implements MyOwnAdapter.List
         }
 
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(FAVOURITE_FLAG){
+            inflateFavouriteMovieList();
+        }
     }
 
     void inflateMainActivity(Parameters paramitersToInflateMoviesList){
@@ -252,6 +261,8 @@ public class MainActivity extends AppCompatActivity implements MyOwnAdapter.List
 
     void inflateFavouriteMovieList(){
 
+        displayRecyclerView();
+
         AppExecutor.getInstance().discIo().execute(new Runnable() {
             @Override
             public void run() {
@@ -260,6 +271,7 @@ public class MainActivity extends AppCompatActivity implements MyOwnAdapter.List
                 List<String> movieNames = new ArrayList<>();
                 List<String> movieImage = new ArrayList<>();
                 List<Double> movieRating = new ArrayList<>();
+                movieId.clear();
 
                 for(int i=0;i<length;i++){
                     MovieEntity tempMovieEntity;

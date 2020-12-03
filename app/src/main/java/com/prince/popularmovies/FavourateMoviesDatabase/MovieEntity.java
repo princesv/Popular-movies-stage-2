@@ -19,9 +19,11 @@ public class MovieEntity {
     Double movieRating;
     String posterUrl;
     String backdropUrl;
+    String trailersJson;
+    String reviewsJson;
 
 
-    public MovieEntity(String movieId, String isAdult, String movieTitle, String originalLanguage, String movieOverview, int movieTotalVotes, String dateOfRelease, Double movieRating,String posterUrl, String backdropUrl) {
+    public MovieEntity(String movieId, String isAdult, String movieTitle, String originalLanguage, String movieOverview, int movieTotalVotes, String dateOfRelease, Double movieRating,String posterUrl, String backdropUrl, String trailersJson, String reviewsJson) {
         this.movieId = movieId;
         this.isAdult = isAdult;
         this.movieTitle = movieTitle;
@@ -32,10 +34,12 @@ public class MovieEntity {
         this.movieRating = movieRating;
         this.backdropUrl = backdropUrl;
         this.posterUrl = posterUrl;
+        this.trailersJson = trailersJson;
+        this.reviewsJson = reviewsJson;
     }
 
     @Ignore
-    public MovieEntity(String isAdult, String movieTitle, String originalLanguage, String movieOverview, int movieTotalVotes, String dateOfRelease, Double movieRating,String posterUrl, String backdropUrl) {
+    public MovieEntity(String isAdult, String movieTitle, String originalLanguage, String movieOverview, int movieTotalVotes, String dateOfRelease, Double movieRating,String posterUrl, String backdropUrl, String trailersJson, String reviewsJson) {
         this.isAdult = isAdult;
         this.movieTitle = movieTitle;
         this.originalLanguage = originalLanguage;
@@ -45,6 +49,8 @@ public class MovieEntity {
         this.movieRating = movieRating;
         this.backdropUrl = backdropUrl;
         this.posterUrl = posterUrl;
+        this.trailersJson = trailersJson;
+        this.reviewsJson = reviewsJson;
     }
 
     public String getMovieId() {
@@ -133,5 +139,21 @@ public class MovieEntity {
 
     public void setBackdropUrl(String backdropUrl) {
         this.backdropUrl = backdropUrl;
+    }
+
+    public String getTrailersJson() {
+        return trailersJson;
+    }
+
+    public void setTrailersJson(String trailersJson) {
+        this.trailersJson = trailersJson;
+    }
+
+    public String getReviewsJson() {
+        return reviewsJson;
+    }
+
+    public void setReviewsJson(String reviewsJson) {
+        this.reviewsJson = reviewsJson;
     }
 }
